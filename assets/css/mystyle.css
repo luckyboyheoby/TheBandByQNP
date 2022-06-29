@@ -1,0 +1,846 @@
+html {
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* now my turn  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  font-size: 15px;
+}
+
+/* #site-container {} */
+#nav-bar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: black;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#nav-bar::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+#nav-bar::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+#nav-bar a:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+#nav-bar > a {
+  padding: 16px 24px;
+  display: block;
+  float: left;
+}
+
+#nav-bar #nav-bar-search {
+  float: right;
+}
+#nav-bar #toggle-menu {
+  float: right;
+  display: none;
+}
+
+#nav-bar #nav-bar-search:hover {
+  background-color: red;
+  color: white;
+}
+
+#nav-bar #dropdown {
+  float: left;
+}
+
+#dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+#sub-nav {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#dropdown:hover #sub-nav {
+  display: block;
+}
+
+#dropdown button {
+  border: none;
+  padding: 16px 24px;
+  background-color: inherit;
+  color: white;
+  text-transform: uppercase;
+}
+
+#dropdown button:hover {
+  background-color: #ccc;
+  color: black;
+  cursor: pointer;
+}
+
+#sub-nav a {
+  display: block;
+  padding: 8px 16px;
+  background-color: white;
+  color: black;
+}
+
+/* Slider  */
+
+#slider-container {
+  margin-top: 49px;
+}
+
+.slide-section {
+  position: relative;
+}
+
+.slide-section > img {
+  width: 100%;
+  border: none;
+  vertical-align: middle;
+}
+
+.img-description {
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.img-description h3 {
+  font-size: 24px;
+  margin: 10px;
+  font-weight: 400;
+}
+
+.img-description p {
+  margin: 1em;
+  font-weight: bolder;
+}
+
+/* slider end  */
+
+/* the band section  */
+#thebandsection-container {
+  background-color: white;
+}
+#theband-section {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+#theband-section h2 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  font-size: 30px;
+}
+#theband-section p {
+  margin: 15px 0px;
+}
+
+#theband-description {
+  text-align: left;
+}
+
+.img-theband {
+  padding: 32px 0px;
+}
+.img-theband::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.img-theband::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.member-card {
+  float: left;
+  width: calc(100% / 3);
+}
+.member-card img {
+  width: 60%;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+/* the band section end  */
+
+/* tour date section  */
+#tour-date {
+  max-width: 800px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 0, 0);
+}
+
+#tour-date::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+#tour-date::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+#tour-date h2 {
+  text-align: center;
+  letter-spacing: 4px;
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 30px;
+  color: white;
+}
+#tour-date > p {
+  text-align: center;
+  opacity: 0.6;
+  font-size: 15px;
+  margin: 15px 0px;
+  color: white;
+}
+
+/* #tickets-status {
+} */
+#tickets-status ul {
+  background-color: #fff;
+}
+#tickets-status ul li {
+  list-style: none;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+  color: #757575 !important;
+}
+#tickets-status ul li span {
+  color: #fff !important;
+  background-color: #f44336;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  line-height: 24px;
+  text-align: center;
+  margin-left: 16px !important;
+}
+
+#tickets-left {
+  background-color: black !important;
+  float: right;
+  border-radius: 50%;
+}
+
+/* tickets-container */
+#tickets-container {
+  margin: 0px -8px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+#tickets-container::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+#tickets-container::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.ticket-card {
+  color: white;
+  width: calc(100% / 3);
+  float: left;
+  padding: 0px 8px;
+  background-color: black;
+  color: black;
+}
+.ticket-card > img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.ticket-card > img:hover {
+  opacity: 0.9;
+}
+.ticket-description {
+  background-color: rgb(255, 255, 255);
+  padding: 0.01em 16px;
+}
+
+.ticket-description > p {
+  margin: 15px 0px;
+}
+
+.ticket-description > button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: black;
+  color: white;
+  margin-bottom: 16px !important;
+}
+.ticket-description > button:hover {
+  background-color: #ccc;
+  color: black;
+}
+/* tour date section end*/
+
+/* contact section  */
+#contacsection-container {
+  background-color: white;
+}
+
+#contact-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 16px;
+}
+#contact-section h2 {
+  text-align: center;
+  letter-spacing: 4px;
+  margin: 10px 0;
+  font-weight: 400;
+  font-size: 30px;
+}
+#contact-section p {
+  opacity: 0.6;
+  text-align: center;
+  margin: 15px 0;
+}
+#contact-section::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#contact-section::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+#twoColumnContainer::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+#twoColumnContainer::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+#twoColumnContainer {
+  padding: 32px 0px;
+}
+#contact-colection {
+  float: left;
+  margin-bottom: 16px;
+  width: 50%;
+}
+#contact-colection ul li {
+  list-style: none;
+  line-height: 24px;
+}
+#form-name,
+#form-email {
+  float: left;
+  width: 50%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  display: block;
+}
+#message-form {
+  width: 50%;
+}
+#form-message {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  display: block;
+}
+#message-form button {
+  float: right;
+}
+#message-form::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+#message-form {
+  float: left;
+}
+#message-form::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+#button-container button {
+  background-color: black;
+  color: white;
+  margin: 16px 0px;
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* end contact section  */
+
+/* image footer  */
+#footer-image img {
+  width: 100%;
+  vertical-align: middle;
+  border: none;
+  /* filter: grayscale(50%); */
+}
+/* end image footer   */
+
+/* footer  */
+#footer {
+  background-color: white;
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer i {
+  color: black;
+  font-size: 24px;
+  opacity: 0.6;
+}
+
+#footer p {
+  font-size: 18px;
+  opacity: 0.6;
+  margin: 12px 0;
+}
+
+#footer a:link,
+#footer a:visited,
+#footer a:hover,
+#footer a:active {
+  color: inherit;
+}
+/* end footer  */
+
+/* modal  */
+#modal-container {
+  /* background-color: rgb(255, 255, 255); */
+}
+#modal-container::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+#modal-container::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#modal {
+  width: 60%;
+  background-color: white;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  animation: animatetop 0.4s;
+  z-index: 3;
+}
+@keyframes animatetop {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+#modal-header {
+  color: #fff !important;
+  background-color: #009688 !important;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+}
+#modal-header h2 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 30px;
+  /* color: white; */
+  background-color: inherit;
+  text-align: center;
+}
+#modal-header span {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 20px;
+}
+
+#modal-header span:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#modal-body {
+  padding: 0 16px;
+}
+#modal-body label {
+  margin: 16px 0;
+  display: block;
+  width: 100%;
+}
+#modal-body input {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+#modal-body button {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #009688 !important;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+#modal-body button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#modal-footer {
+  padding: 0 16px;
+}
+
+#modal-footer button {
+  padding: 8px 16px;
+  font-weight: bold;
+  background-color: #f44336 !important;
+  color: white;
+  border: none;
+  margin: 16px 0;
+}
+#modal-footer button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#modal-footer p {
+  float: right;
+}
+#modal-footer::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+#modal-footer::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#forOpacity {
+  display: none;
+  background-color: black;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/* end modal  */
+
+/* RESPONSIVE 
+pc >= 1024px
+table (min-width: 740px) and (max-width: 1023px)
+mobile (max-width: 739px)
+
+From F8 */
+
+/* Khi man hinh nho hon 739px */
+@media screen and (max-width: 739px) {
+  /* class=".mobile-scr-hidden" */
+  .mobile-scr-hidden {
+    display: none !important;
+  }
+  .mobile-scr-show {
+    display: block !important;
+  }
+  #home {
+    float: none !important;
+  }
+  #tour-date {
+    padding: 0px 16px;
+  }
+  #theband-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .member-card {
+    float: none;
+    width: 100%;
+  }
+  .ticket-card {
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+  }
+  .img-description {
+    display: none;
+  }
+}
+
+/* Khi man hinh trong khoang 740 va 1023  */
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+  #tour-date {
+    padding: 0px 16px;
+  }
+  #theband-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Khi man hinh lon hon 1024 */
+@media screen and (min-width: 1024px) {
+}
